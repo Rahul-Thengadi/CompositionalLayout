@@ -27,7 +27,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="XKn-KS-LRT">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="labelCell" id="XKn-KS-LRT" customClass="LabelCell" customModule="CompositionalLayout" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="a8h-dR-lOU">
@@ -47,6 +47,9 @@
                             <constraint firstItem="spY-a6-UZI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dHP-t3-qxn"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="spY-a6-UZI" id="vs5-uD-05e"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

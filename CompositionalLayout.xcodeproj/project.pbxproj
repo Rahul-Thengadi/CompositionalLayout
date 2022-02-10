@@ -13,6 +13,7 @@
 		019B728027B4D25800CBA73A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 019B727E27B4D25800CBA73A /* Main.storyboard */; };
 		019B728227B4D25900CBA73A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 019B728127B4D25900CBA73A /* Assets.xcassets */; };
 		019B728527B4D25900CBA73A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 019B728327B4D25900CBA73A /* LaunchScreen.storyboard */; };
+		019B728D27B4D69800CBA73A /* LabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019B728C27B4D69800CBA73A /* LabelCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		019B728127B4D25900CBA73A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		019B728427B4D25900CBA73A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		019B728627B4D25900CBA73A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		019B728C27B4D69800CBA73A /* LabelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				019B727827B4D25800CBA73A /* AppDelegate.swift */,
 				019B727A27B4D25800CBA73A /* SceneDelegate.swift */,
 				019B727C27B4D25800CBA73A /* ViewController.swift */,
+				019B728C27B4D69800CBA73A /* LabelCell.swift */,
 				019B727E27B4D25800CBA73A /* Main.storyboard */,
 				019B728127B4D25900CBA73A /* Assets.xcassets */,
 				019B728327B4D25900CBA73A /* LaunchScreen.storyboard */,
@@ -140,6 +143,7 @@
 			files = (
 				019B727D27B4D25800CBA73A /* ViewController.swift in Sources */,
 				019B727927B4D25800CBA73A /* AppDelegate.swift in Sources */,
+				019B728D27B4D69800CBA73A /* LabelCell.swift in Sources */,
 				019B727B27B4D25800CBA73A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
