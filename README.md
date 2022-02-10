@@ -26,3 +26,8 @@ There are three ways to layout
 * Horizontal
 * Vertical
 * Custom
+
+## Resources
+
+1. [Apple docs - UICollectionViewCompositionalLayout](https://developer.apple.com/documentation/uikit/uicollectionviewcompositionallayout)
+2. [WWDC 2019 - Advances in Collection View Layout](https://developer.apple.com/videos/play/wwdc2019/215/)
