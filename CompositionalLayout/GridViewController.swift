@@ -8,13 +8,25 @@
 import UIKit
 
 class GridViewController: UIViewController {
+    
+    // 3
+    // setup enum to hold sections for collection view
+    enum Section {
+        case main
+    }
 
     @IBOutlet weak var collectionView: UICollectionView! // default is flow layout
+    
+    // 4
+    // declare our data source, which will be using diffable data source
+    // review: both the SectionIdentifier and ItemIdentifier needs to be Hashable objects
+    private var dataSource: UICollectionViewDiffableDataSource<Section, Int>!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         configureCollectionView()
+        configureDataSource()
     }
 
     // 1
@@ -52,7 +64,30 @@ class GridViewController: UIViewController {
         // do this if using Storyboard to layout your collection view
         // sice Storyboard does not support compositional layout
         collectionView.collectionViewLayout = createLayout() // from flow layout to compositional layout
-        collectionView.backgroundColor = .systemYellow
+        collectionView.backgroundColor = .systemBackground
+    }
+    
+    // 5
+    // configure the data source(
+    private func configureDataSource() {
+        // 1
+        // setting up the data source
+        dataSource = UICollectionViewDiffableDataSource<Section, Int>(collectionView: collectionView, cellProvider: { collectionView, indexPath, itemIdentifier in
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "labelCell", for: indexPath) as? LabelCell else {
+                fatalError("could not deque a LabelCell")
+            }
+            
+            cell.backgroundColor = .systemOrange
+            cell.textLabel.text = "\(itemIdentifier)"
+            return cell
+        })
+        
+        // 2
+        // setting the initial snapshot
+        var snapshot = NSDiffableDataSourceSnapshot<Section, Int>()
+        snapshot.appendSections([.main]) // only one section
+        snapshot.appendItems(Array(1...100))
+        dataSource.apply(snapshot, animatingDifferences: false)
     }
 }
 

@@ -18,12 +18,13 @@ class LabelCell: UICollectionViewCell {
     // coming from programatic UI setup
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
+        commonInit()
     }
     
     // coming from Storyboard
     required init?(coder: NSCoder) {
         super.init(coder: coder)
+        commonInit()
     }
     
     // helper initializer method
