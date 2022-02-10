@@ -13,7 +13,8 @@ class GridViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        configureCollectionView()
     }
 
     // 1
@@ -41,6 +42,17 @@ class GridViewController: UIViewController {
         // configure the layout
         let layout = UICollectionViewCompositionalLayout(section: section)
         return layout
+    }
+    
+    // 2
+    private func configureCollectionView() {
+        // collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: createLayout())
+        
+        // change collectionView's layout
+        // do this if using Storyboard to layout your collection view
+        // sice Storyboard does not support compositional layout
+        collectionView.collectionViewLayout = createLayout() // from flow layout to compositional layout
+        collectionView.backgroundColor = .systemYellow
     }
 }
 
