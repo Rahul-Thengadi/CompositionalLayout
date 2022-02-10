@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class GridViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
     
